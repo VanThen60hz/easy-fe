@@ -1,10 +1,12 @@
-import logo from "./logo.svg";
 import "./App.scss";
+import ColorBox from "./components";
 
 function App() {
   return (
     <div className="app">
       <h1>Welcome to React</h1>
+
+      <ColorBox />
     </div>
   );
 }
