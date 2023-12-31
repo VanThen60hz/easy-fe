@@ -5,6 +5,7 @@ import PostList from "./components/PostList";
 import Pagination from "./components/Pagination";
 import PostFilterForm from "./components/PostFilterForm";
 import Clock from "./components/Clock";
+import BetterClock from "./components/BetterClock";
 // import TodoList from "./components/TodoList";
 // import TodoForm from "./components/TodoForm";
 
@@ -92,11 +93,10 @@ function App() {
     <div className="app">
       <h1>React hooks - Clock</h1>
 
-      {showClock && <Clock/>}
+      {showClock && <Clock />}
+      <BetterClock />
 
-      <button onClick={() => setShowClock(false)}>
-        Hide clock
-      </button>
+      <button onClick={() => setShowClock(false)}>Hide clock</button>
       {/* <PostFilterForm onSubmit={handleFilterChange}/>
       <PostList posts={postList} />
       <Pagination pagination={pagination} onPageChange={handlePageChange} /> */}
