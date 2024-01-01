@@ -8,6 +8,8 @@ import Clock from "./components/Clock";
 import BetterClock from "./components/BetterClock";
 // import TodoList from "./components/TodoList";
 // import TodoForm from "./components/TodoForm";
+import MagicBox from "./components/MagicBox/index";
+import Hero from "./components/Hero/Hero";
 
 function App() {
   // const [todoList, setTodoList] = useState([
@@ -87,16 +89,26 @@ function App() {
   //   })
   // }
 
-  const [showClock, setShowClock] = useState(true);
+  // const [showClock, setShowClock] = useState(true);
+
+  const [count, setCount] = useState(0);
 
   return (
     <div className="app">
       <h1>React hooks - Clock</h1>
 
-      {showClock && <Clock />}
-      <BetterClock />
+      <p>{count}</p>
 
-      <button onClick={() => setShowClock(false)}>Hide clock</button>
+      <button onClick={() => setCount(count + 1)}>Increase</button>
+
+      <Hero name="Van Then" />
+
+      {/* <MagicBox /> */}
+
+      {/* {showClock && <Clock />}
+      <BetterClock /> */}
+
+      {/* <button onClick={() => setShowClock(false)}>Hide clock</button> */}
       {/* <PostFilterForm onSubmit={handleFilterChange}/>
       <PostList posts={postList} />
       <Pagination pagination={pagination} onPageChange={handlePageChange} /> */}
